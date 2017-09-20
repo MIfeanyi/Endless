@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://gfx/UI/dialog.png" type="Texture" id=1]
+
+[node name="Dialog" type="Node"]
+
+[node name="Text" type="RichTextLabel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 23.0
+margin/top = 10.0
+margin/right = 63.0
+margin/bottom = 50.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 261.07, 65.374 )
+transform/scale = Vector2( 4.05775, 1 )
+texture = ExtResource( 1 )
+
+
