@@ -258,6 +258,14 @@ transform/pos = Vector2( 62.8621, 544.773 )
 transform/scale = Vector2( 3.58064, 2.89689 )
 texture = ExtResource( 6 )
 
+[node name="weapon" type="Node2D" parent="Game/Player/UI/Elements"]
+
+[node name="weapon" type="Sprite" parent="Game/Player/UI/Elements/weapon"]
+
+transform/pos = Vector2( 204.411, 545.457 )
+transform/scale = Vector2( 3.35399, 2.84985 )
+texture = ExtResource( 6 )
+
 [node name="Tutorial" type="Node2D" parent="Game/Player/UI"]
 
 transform/pos = Vector2( 146.16, 511.111 )
