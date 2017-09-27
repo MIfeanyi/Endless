@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=1]
+[gd_scene load_steps=19 format=1]
 
 [ext_resource path="res://tilesets/level1.tres" type="TileSet" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://tutorial.gd" type="Script" id=7]
 [ext_resource path="res://gfx/Endless/level1_08.png" type="Texture" id=8]
 [ext_resource path="res://gfx/Endless/soul.png" type="Texture" id=9]
+[ext_resource path="res://gfx/Endless/stairs.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -114,6 +115,23 @@ tracks/0/keys = {
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.8 ]
+}
+
+[sub_resource type="Animation" id=8]
+
+resource/name = "Fade In"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("stairs:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
 }
 
 [node name="Game" type="Node"]
@@ -315,6 +333,8 @@ max_lines_visible = -1
 
 [node name="Ghost" type="Node2D" parent="Game"]
 
+editor/display_folded = true
+
 [node name="soul" type="KinematicBody2D" parent="Game/Ghost" groups=[
 "tut_char",
 ]]
@@ -349,6 +369,29 @@ playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/appear = SubResource( 7 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="Switches" type="Node2D" parent="."]
+
+[node name="Level 2 Stairs" type="Node2D" parent="Switches" groups=[
+"stairs",
+]]
+
+[node name="stairs" type="Sprite" parent="Switches/Level 2 Stairs"]
+
+visibility/opacity = 0.0
+transform/pos = Vector2( 409.056, 559.319 )
+texture = ExtResource( 10 )
+
+[node name="anim" type="AnimationPlayer" parent="Switches/Level 2 Stairs"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/Fade In" = SubResource( 8 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
