@@ -17,12 +17,12 @@
 [ext_resource path="res://gfx/Endless/level1_02.png" type="Texture" id=15]
 [ext_resource path="res://gfx/Endless/level1_08.png" type="Texture" id=16]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
@@ -32,7 +32,7 @@ extents = Vector2( 32, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 32.0001, 32 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10.4, 14.2105 )
@@ -124,7 +124,7 @@ extents = Vector2( 10.4, 14.2105 )
 7/occluder_offset = Vector2( 16, 16 )
 7/navigation_offset = Vector2( 16, 16 )
 7/shape_offset = Vector2( 16, 16 )
-7/shapes = [ SubResource( 4 ) ]
+7/shapes = [ SubResource( 2 ) ]
 7/one_way_collision_direction = Vector2( 0, 0 )
 7/one_way_collision_max_depth = 0.0
 8/name = "level1_02"
@@ -146,7 +146,7 @@ extents = Vector2( 10.4, 14.2105 )
 9/occluder_offset = Vector2( 16, 16 )
 9/navigation_offset = Vector2( 16, 16 )
 9/shape_offset = Vector2( 16, 16 )
-9/shapes = [ SubResource( 1 ) ]
+9/shapes = [ SubResource( 4 ) ]
 9/one_way_collision_direction = Vector2( 0, 0 )
 9/one_way_collision_max_depth = 0.0
 10/name = "level1_11"
@@ -212,7 +212,7 @@ extents = Vector2( 10.4, 14.2105 )
 15/occluder_offset = Vector2( 16, 16 )
 15/navigation_offset = Vector2( 16, 16 )
 15/shape_offset = Vector2( 16, 16 )
-15/shapes = [ SubResource( 2 ) ]
+15/shapes = [ SubResource( 1 ) ]
 15/one_way_collision_direction = Vector2( 0, 0 )
 15/one_way_collision_max_depth = 0.0
 

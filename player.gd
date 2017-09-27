@@ -29,9 +29,12 @@ func _fixed_process(delta):
 				var other = get_collider()
 				if( other.is_in_group("tut_char")):
 					print("detected")
+					get_parent().get_node("Switches/Level 2 Stairs/anim").play("Fade In")
 					tutorial.display("decend to begin...")
 					hero.control = LOCKED
-					
+				elif(other.is_in_group("stairs"):
+					#LOAD level 2
+					pass
 					#TODO: enable player to proceed down stairs.
 	
 		if Input.is_action_pressed("ui_right"):

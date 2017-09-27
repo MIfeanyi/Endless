@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=1]
+[gd_scene load_steps=20 format=1]
 
 [ext_resource path="res://tilesets/level1.tres" type="TileSet" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
@@ -133,6 +133,11 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.8633, 15.5607 )
 
 [node name="Game" type="Node"]
 
@@ -286,7 +291,7 @@ texture = ExtResource( 6 )
 
 [node name="Tutorial" type="Node2D" parent="Game/Player/UI"]
 
-transform/pos = Vector2( 146.16, 511.111 )
+transform/pos = Vector2( 146.254, 511.3 )
 transform/scale = Vector2( 9.0864, 5.71754 )
 script/script = ExtResource( 7 )
 
@@ -374,19 +379,20 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="Switches" type="Node2D" parent="."]
+[node name="Switches" type="Node2D" parent="Game"]
 
-[node name="Level 2 Stairs" type="Node2D" parent="Switches" groups=[
+transform/scale = Vector2( 0.629125, 1.26202 )
+
+[node name="Level 2 Stairs" type="Node2D" parent="Game/Switches" groups=[
 "stairs",
 ]]
 
-[node name="stairs" type="Sprite" parent="Switches/Level 2 Stairs"]
+[node name="stairs" type="Sprite" parent="Game/Switches/Level 2 Stairs"]
 
-visibility/opacity = 0.0
 transform/pos = Vector2( 409.056, 559.319 )
 texture = ExtResource( 10 )
 
-[node name="anim" type="AnimationPlayer" parent="Switches/Level 2 Stairs"]
+[node name="anim" type="AnimationPlayer" parent="Game/Switches/Level 2 Stairs"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
@@ -396,5 +402,22 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Game/Switches/Level 2 Stairs"]
+
+transform/pos = Vector2( 409.056, 559.319 )
+input/pickable = false
+shapes/0/shape = SubResource( 9 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+
+[node name="Coll" type="CollisionShape2D" parent="Game/Switches/Level 2 Stairs/KinematicBody2D"]
+
+shape = SubResource( 9 )
+trigger = false
+_update_shape_index = 0
 
 
