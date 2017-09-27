@@ -32,7 +32,7 @@ func _fixed_process(delta):
 					get_parent().get_node("Switches/Level 2 Stairs/anim").play("Fade In")
 					tutorial.display("decend to begin...")
 					hero.control = LOCKED
-				elif(other.is_in_group("stairs"):
+				elif(other.is_in_group("stairs")):
 					#LOAD level 2
 					pass
 					#TODO: enable player to proceed down stairs.
