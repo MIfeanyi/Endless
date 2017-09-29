@@ -4,17 +4,25 @@ enum STATE {LOADING,LOADED,RESET}
 
 var level =["level1.scn"]
 var current_level = 0
-var level_scene
+onready var level_scene = preload("res://tilesets/levels/tutorial.tscn")
 
 func _ready():
-	# lOAD TUTORIAL LEVEL
-	# Initialization here
+	var l = level_scene.instance()
+	l.set_name("current_level")
+	add_child(l)
+	print("loaded scene")
 	pass
+
 func _next_level(param1):
+	var l
 	if(param1!=null):
-		#load specific level ie. level_sceene = get_node(level[param1]), current_level = param1
-		pass
+		current_level = param1
 	else:
-		#increment ie. current_level
-		pass
+		current_level = current_level+1
+
+	level_scene = load(level[current_level])
+	l = level_scene.instance()
+	l.set_name("current_level")
+	add_child(l)
+	print(l+" loaded")
 	pass
