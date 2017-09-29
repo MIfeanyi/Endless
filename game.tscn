@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=1]
+[gd_scene load_steps=22 format=1]
 
 [ext_resource path="res://tilesets/level1.tres" type="TileSet" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://gfx/Endless/level1_08.png" type="Texture" id=8]
 [ext_resource path="res://gfx/Endless/soul.png" type="Texture" id=9]
 [ext_resource path="res://gfx/Endless/stairs.png" type="Texture" id=10]
+[ext_resource path="res://tilesets/Manager.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -132,6 +133,23 @@ tracks/0/keys = {
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+
+resource/name = "Invisible"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("stairs:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
 }
 
 [sub_resource type="RectangleShape2D" id=9]
@@ -389,6 +407,7 @@ transform/scale = Vector2( 0.629125, 1.26202 )
 
 [node name="stairs" type="Sprite" parent="Game/Switches/Level 2 Stairs"]
 
+visibility/opacity = 0.0
 transform/pos = Vector2( 409.056, 559.319 )
 texture = ExtResource( 10 )
 
@@ -398,6 +417,7 @@ playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 "anims/Fade In" = SubResource( 8 )
+anims/Invisible = SubResource( 10 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -419,5 +439,7 @@ collision/margin = 0.08
 shape = SubResource( 9 )
 trigger = false
 _update_shape_index = 0
+
+[node name="Manager" parent="." instance=ExtResource( 11 )]
 
 
