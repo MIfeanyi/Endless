@@ -4,7 +4,7 @@ enum STATE {LOADING,LOADED,RESET}
 
 var level =["level1.scn"]
 var current_level = 0
-onready var level_scene = preload("res://tilesets/levels/tutorial.tscn")
+onready var level_scene = preload("res://tilesets/levels/Tutorial.tscn")
 
 func _ready():
 	var l = level_scene.instance()
