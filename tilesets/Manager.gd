@@ -13,7 +13,7 @@ func _ready():
 	print("loaded scene")
 	pass
 
-func _next_level(param1):
+func change(param1):
 	var l
 	if(param1!=null):
 		current_level = param1

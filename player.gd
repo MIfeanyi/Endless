@@ -1,6 +1,7 @@
 extends KinematicBody2D
+signal on_stairs
 
-onready var tutorial = get_node("UI/Tutorial")
+onready var tutorial = get_node("UI/Hint")
 enum Direction {RIGHT, LEFT}
 enum STATUS {IDLE, STANDING, RUNNING, ATTACKING}
 enum CONTROL {LOCKED, UNLOCKED}
@@ -34,6 +35,7 @@ func _move(delta):
 					hero.control = LOCKED
 				elif(other.is_in_group("stairs")):
 					other.action()
+					emit_signal("on_stairs")
 					pass
 	
 		if Input.is_action_pressed("ui_right"):

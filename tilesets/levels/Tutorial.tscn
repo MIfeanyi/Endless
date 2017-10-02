@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
-[ext_resource path="res://tilesets/level1.tres" type="TileSet" id=1]
-[ext_resource path="res://tilesets/levels/switchl1.gd" type="Script" id=2]
-[ext_resource path="res://gfx/Endless/stairs.png" type="Texture" id=3]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://NPC/soul.tscn" type="PackedScene" id=5]
+[ext_resource path="res://tilesets/levels/Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://tilesets/level1.tres" type="TileSet" id=2]
+[ext_resource path="res://tilesets/levels/switchl1.gd" type="Script" id=3]
+[ext_resource path="res://gfx/Endless/stairs.png" type="Texture" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://NPC/soul.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -15,10 +16,12 @@ extents = Vector2( 16.389, 15.7118 )
 "level",
 ]]
 
+script/script = ExtResource( 1 )
+
 [node name="TileMap" type="TileMap" parent="."]
 
 mode = 0
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 2 )
 cell/size = Vector2( 32, 32 )
 cell/quadrant_size = 17
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -48,11 +51,11 @@ shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
-script/script = ExtResource( 2 )
+script/script = ExtResource( 3 )
 
 [node name="img" type="Sprite" parent="stairs"]
 
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="stairs"]
 
@@ -70,14 +73,16 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
+[node name="Player" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 421.116, 436.465 )
 transform/scale = Vector2( 1.23867, 0.910528 )
 
-[node name="soul" parent="." instance=ExtResource( 5 )]
+[node name="soul" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 438.303, 264.158 )
 transform/scale = Vector2( 1.38351, 0.840665 )
+
+[connection signal="on_stairs" from="Player" to="." method="_on_Player_on_stairs"]
 
 
