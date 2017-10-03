@@ -128,7 +128,6 @@ scale = Vector2( 1, 1 )
 
 [node name="Light2D" type="Light2D" parent="UI"]
 
-visibility/visible = false
 transform/pos = Vector2( 402.211, 300.438 )
 transform/scale = Vector2( 2.66724, 1.98466 )
 enabled = true
