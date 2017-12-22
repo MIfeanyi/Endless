@@ -1,9 +1,0 @@
-[gd_scene format=1]
-
-[node name="Health" type="Node"]
-
-[node name="Health" type="Node2D" parent="."]
-
-[node name="Healthbar" type="Sprite" parent="Health"]
-
-

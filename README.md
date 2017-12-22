@@ -4,8 +4,9 @@
 ## Team
 Code & art by [MIfeanyi](https://twitter.com/Galatic8bit). 
 
-## Special Thanks
 
+## Special Thanks
+[lavaduderDev](https://github.com/lavaduderDev) for music.
 
 # Dependencies
 This game was built with [Godot](https://godotengine.org/). The releases only contain the required files required to run. For binary packages please check:
