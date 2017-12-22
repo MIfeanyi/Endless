@@ -1,0 +1,14 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/echish.ogg-b3e8db42c4ef594c25a76313970df659.oggstr"
+
+[deps]
+
+source_md5="f2e62873dc7caac787fd61a2fdefe45e"
+
+[params]
+
+loop=true
+loop_offset=0
