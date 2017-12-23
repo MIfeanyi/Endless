@@ -1,6 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Endless Title.png" type="Texture" id=1]
+[ext_resource path="res://gfx/UI/Menu/play normal.png" type="Texture" id=1]
+[ext_resource path="res://gfx/UI/Menu/play click.png" type="Texture" id=2]
+[ext_resource path="res://gfx/UI/Menu/play hover.png" type="Texture" id=3]
+[ext_resource path="res://gfx/UI/Menu/quit normal.png" type="Texture" id=4]
+[ext_resource path="res://gfx/UI/Menu/quit click.png" type="Texture" id=5]
+[ext_resource path="res://gfx/UI/Menu/quit hover.png" type="Texture" id=6]
+[ext_resource path="res://Endless Title.png" type="Texture" id=7]
+[ext_resource path="res://Music/echish.ogg" type="AudioStream" id=8]
 
 [sub_resource type="Animation" id=1]
 
@@ -23,10 +30,69 @@ tracks/0/keys = {
 
 [node name="Node" type="Node" index="0"]
 
-[node name="Endless Title" type="Sprite" parent="." index="0"]
+[node name="Container" type="Container" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = -325.0
+margin_right = 5.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="TextureButton" type="TextureButton" parent="Container" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -79.0
+margin_right = -761.0
+margin_bottom = 79.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+_sections_unfolded = [ "Anchor", "Textures" ]
+
+[node name="TextureButton2" type="TextureButton" parent="Container" index="1"]
+
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -258.0
+margin_top = -79.0
+margin_bottom = 79.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+_sections_unfolded = [ "Anchor", "Textures" ]
+
+[node name="Endless Title" type="Sprite" parent="." index="1"]
 
 position = Vector2( 268.822, 140.249 )
-texture = ExtResource( 1 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Animation", "Offset", "Pause", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Endless Title" index="0"]
@@ -39,5 +105,16 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Endless Title" index="1"]
+
+position = Vector2( 317.335, 8.35092 )
+stream = ExtResource( 8 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 
