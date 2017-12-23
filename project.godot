@@ -11,8 +11,10 @@ config_version=3
 [application]
 
 config/name="Endless"
+run/main_scene="res://Intro.tscn"
 config/icon="res://icon.png"
 
 [rendering]
 
+environment/default_clear_color=Color( 0.0625, 0.0593262, 0.0593262, 1 )
 environment/default_environment="res://default_env.tres"
