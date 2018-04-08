@@ -6,7 +6,11 @@ path="res://.import/quit hover.png-350c70975b58682d12700f9661f1e725.stex"
 
 [deps]
 
+source_file="res://gfx/UI/Menu/quit hover.png"
 source_md5="58dd5c932de3f54c742c8892aa2792a5"
+
+dest_files=[ "res://.import/quit hover.png-350c70975b58682d12700f9661f1e725.stex" ]
+dest_md5="5fea29b5383c9a22113f25399a8f4016"
 
 [params]
 

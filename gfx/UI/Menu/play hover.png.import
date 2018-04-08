@@ -6,7 +6,11 @@ path="res://.import/play hover.png-494ead7e73934c1e612be65743ddd112.stex"
 
 [deps]
 
+source_file="res://gfx/UI/Menu/play hover.png"
 source_md5="4b165ff9cce8065e4efe3f6c68bdf47d"
+
+dest_files=[ "res://.import/play hover.png-494ead7e73934c1e612be65743ddd112.stex" ]
+dest_md5="dea3c2f41aa02b98c43990fd7c0c1c44"
 
 [params]
 

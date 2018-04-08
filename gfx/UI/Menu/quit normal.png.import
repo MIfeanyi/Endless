@@ -6,7 +6,11 @@ path="res://.import/quit normal.png-81a2f5c192bd5540b85c247abec239bd.stex"
 
 [deps]
 
+source_file="res://gfx/UI/Menu/quit normal.png"
 source_md5="dd1fb78e846140b30996a56a10b81c8d"
+
+dest_files=[ "res://.import/quit normal.png-81a2f5c192bd5540b85c247abec239bd.stex" ]
+dest_md5="d341c33783b57aa90038d5698ad591c7"
 
 [params]
 

@@ -6,7 +6,11 @@ path="res://.import/quit click.png-13c34262b4a26d76513827c685da88aa.stex"
 
 [deps]
 
+source_file="res://gfx/UI/Menu/quit click.png"
 source_md5="43d121c1624187b74bccfa0f4d91812c"
+
+dest_files=[ "res://.import/quit click.png-13c34262b4a26d76513827c685da88aa.stex" ]
+dest_md5="1dc18988d50ffacfd1f3f13db3faa5cb"
 
 [params]
 

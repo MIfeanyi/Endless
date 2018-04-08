@@ -6,7 +6,11 @@ path="res://.import/play normal.png-f69ac15c227d49c92e5a0ced658745c2.stex"
 
 [deps]
 
+source_file="res://gfx/UI/Menu/play normal.png"
 source_md5="7668ab9fed6a27d526d2b9b1d8c53140"
+
+dest_files=[ "res://.import/play normal.png-f69ac15c227d49c92e5a0ced658745c2.stex" ]
+dest_md5="fdf5273d4c9bb9515ee0583e4cedaddb"
 
 [params]
 

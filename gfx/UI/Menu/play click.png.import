@@ -6,7 +6,11 @@ path="res://.import/play click.png-8929e7cf8c0d5dd8caf1b3e281930c05.stex"
 
 [deps]
 
+source_file="res://gfx/UI/Menu/play click.png"
 source_md5="f8f70cf7a39e6461c464350e92c64d4c"
+
+dest_files=[ "res://.import/play click.png-8929e7cf8c0d5dd8caf1b3e281930c05.stex" ]
+dest_md5="7b9441ce9766ebdfec24cea56194eed9"
 
 [params]
 

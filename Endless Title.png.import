@@ -6,7 +6,11 @@ path="res://.import/Endless Title.png-f21fc55605c42552f22f303b37e33eff.stex"
 
 [deps]
 
+source_file="res://Endless Title.png"
 source_md5="9163c2f05872337fb1fadb3f8eeecf25"
+
+dest_files=[ "res://.import/Endless Title.png-f21fc55605c42552f22f303b37e33eff.stex" ]
+dest_md5="7c0c9ae3fea996f004420398fe50f52d"
 
 [params]
 
